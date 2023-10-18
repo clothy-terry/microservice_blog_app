@@ -2,7 +2,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const {randomBytes} = require('crypto');
 
-
+// If we make any change to our code spcace,
+// the server will restart cuz we are using nodeman
+// and the server data storage will be cleared
 const app = express();
 app.use(bodyParser.json());
 const posts = {};
@@ -10,7 +12,6 @@ const posts = {};
 app.get('/posts', (req, res) => {
     res.send(posts);
 });
-
 app.post('/posts', (req, res) => {
     const id  = randomBytes(4).toString('hex');
     const {title} = req.body;
