@@ -20,6 +20,7 @@ app.post('/posts', (req, res) => {
     //tell user that we have now create a new post
 });
 
+// http://localhost:4000, test on local Postman
 app.listen(4000, ()=> {
     console.log('listening on 4000');
 })
