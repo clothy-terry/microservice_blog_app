@@ -1,13 +1,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const {randomBytes} = require('crypto');
-
+const cors = require('cors');
 // If we make any change to our code spcace,
 // the server will restart cuz we are using nodeman
 // and the server data storage will be cleared
 const app = express();
 app.use(bodyParser.json());
 const posts = {};
+app.use(cors());
 
 app.get('/posts', (req, res) => {
     res.send(posts);
