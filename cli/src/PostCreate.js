@@ -11,10 +11,12 @@ const PostCreate = () => {
     // we need to prevent it
     event.preventDefault();
 
+    // Make post comment request to our post service on 4000
     await axios.post("http://localhost:4000/posts", {
       title,
     });
 
+    // Empty out the form input field after submission
     setTitle("");
   };
 
