@@ -1,6 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const { randomBytes } = require('crypto');
+// Install cors to handle classic microservices error: cors error
+// it hapens when we send request from a domain(localhost3000) to another dowmain(localhost4001)
 const cors = require('cors');
 const app = express();
 app.use(bodyParser.json());
