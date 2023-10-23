@@ -1,4 +1,6 @@
+// import useState Hook
 import React, { useState } from "react";
+// imort axios to send actual request
 import axios from "axios";
 
 const PostCreate = () => {
