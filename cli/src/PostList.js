@@ -10,9 +10,11 @@ const PostList = () => {
     setPosts(res.data);
   };
 
+  // Run fetchPosts function immediately after the page has loaded
   useEffect(() => {
     fetchPosts();
   }, []);
+  // [] means on;y run the function inside one time
 
   const renderedPosts = Object.values(posts).map((post) => {
     return (
