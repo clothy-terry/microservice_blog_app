@@ -2,3 +2,4 @@ This is a microservice project
 Current plan: build a simplified service with some features
 1. Set up a simple post service using express
 2. Finish testing post service
+3. Implemented Comment service on 4001
